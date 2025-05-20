@@ -1,2 +1,3 @@
-# stellar_kickstart_backend
-Stellar Kickstart Application Backend
+ROC Backend API
+
+# ROC-Backend
