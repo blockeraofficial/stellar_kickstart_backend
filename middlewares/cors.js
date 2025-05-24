@@ -4,14 +4,20 @@ const whiteList = [
   "http://localhost:3000",
   "http://localhost:3001",
   "http://localhost:4000",
-  "https://www.rocplatform.online"
+  "https://www.rocplatform.online",
+  "https://stellar-kickstart-proof-of-concept.onrender.com"
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (!origin || whiteList.includes(origin)) {
+    const isDev = process.env.NODE_ENV !== "production";
+
+    // Allow whitelisted origins or undefined in development
+    if (whiteList.includes(origin) || (isDev && !origin)) {
+      console.log("Incoming origin:", origin || "undefined (allowed in dev)");
       callback(null, true);
     } else {
+      console.log("Incoming origin:", origin);
       callback(new Error("Not allowed by CORS"));
     }
   },
