@@ -5,7 +5,8 @@ const whiteList = [
   "http://localhost:3001",
   "http://localhost:4000",
   "https://www.rocplatform.online",
-  "https://stellar-kickstart-proof-of-concept.onrender.com"
+  "https://stellar-kickstart-proof-of-concept.onrender.com",
+  "https://stellar-kickstart-backend.onrender.com",
 ];
 
 const corsOptions = {
