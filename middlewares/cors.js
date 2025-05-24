@@ -13,6 +13,8 @@ const corsOptions = {
   origin: function (origin, callback) {
     const isDev = process.env.NODE_ENV !== "production";
 
+  console.log("Look at the origin:", origin)
+
     // Allow whitelisted origins or undefined in development
     if (whiteList.includes(origin) || (isDev && !origin)) {
       console.log("Incoming origin:", origin || "undefined (allowed in dev)");
