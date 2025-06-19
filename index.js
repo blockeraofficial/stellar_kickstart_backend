@@ -36,7 +36,7 @@ app.use(routeNotFound);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(port, () => {
-  // console.log(`ROC API IS RUNNING AT http://${host}:${port}`);
+  console.log(`ROC API IS RUNNING AT http://${host}:${port}`);
   // connect_database()
   
 });
